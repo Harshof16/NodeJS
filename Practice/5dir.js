@@ -6,5 +6,12 @@ if (!fs.existsSync("./new")) {
     if (err) throw err;
     console.log("Directory created");
   });
-  console.log('Hey');
+}
+
+//to remove the directory
+if (fs.existsSync("./new")) {
+  fs.rmdir("./new", (err) => {
+    if (err) throw err;
+    console.log("Directory removed");
+  });
 }
